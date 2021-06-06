@@ -1,95 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Java Doc Fast</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body>
-    <form action="success.html" method="GET">
-      <table>
-        <tr>
-          <th>Tài khoản:</th>
-          <td><input type="text" name="username" id="username" /></td>
-          <td><span id="errorUsername"></span></td>
-        </tr>
-        <tr>
-          <th>Họ và tên:</th>
-          <td><input type="text" name="fullName" id="fullName" /></td>
-          <td><span id="errorFullName"></span></td>
-        </tr>
-        <tr>
-          <th>Email:</th>
-          <td><input type="text" name="email" id="email" /></td>
-          <td><span id="errorEmail"></span></td>
-        </tr>
-        <tr>
-          <th>Mật khẩu:</th>
-          <td>
-            <input type="password" name="password" id="password" autocomplete />
-          </td>
-          <td><span id="errorPassword"></span></td>
-        </tr>
-        <tr>
-          <th>Xác Nhận Mật khẩu:</th>
-          <td>
-            <input
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Doc Fast</title>
+  <!-- <link rel="stylesheet" href="assets/css/styles.css" /> -->
+  <style>
+    th {
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="success.html" method="GET">
+    <table>
+      <tr>
+        <th>Tài khoản:</th>
+        <td><input type="text" name="username" id="username" /></td>
+        <td><span id="errorUsername"></span></td>
+      </tr>
+      <tr>
+        <th>Họ và tên:</th>
+        <td><input type="text" name="fullName" id="fullName" /></td>
+        <td><span id="errorFullName"></span></td>
+      </tr>
+      <tr>
+        <th>Email:</th>
+        <td><input type="text" name="email" id="email" /></td>
+        <td><span id="errorEmail"></span></td>
+      </tr>
+      <tr>
+        <th>Mật khẩu:</th>
+        <td>
+          <input type="password" name="password" id="password" autocomplete />
+        </td>
+        <td><span id="errorPassword"></span></td>
+      </tr>
+      <tr>
+        <th>Xác Nhận Mật khẩu:</th>
+        <td>
+          <input
               type="password"
               name="retryPassword"
               id="retryPassword"
               autocomplete
             />
-          </td>
-          <td><span id="errorRetryPassword"></span></td>
-        </tr>
-        <tr>
-          <th>Ngày bắt đầu làm:</th>
-          <td><input type="date" name="startDate" id="startDate" /></td>
-          <td><span id="errorStartDate"></span></td>
-        </tr>
-        <tr>
-          <th>Lương cơ bản:</th>
-          <td><input type="text" name="salary" id="salary" /></td>
-          <td><span id="errorSalary"></span></td>
-        </tr>
-        <tr>
-          <th>Chức vụ:</th>
-          <td>
-            <select name="position" id="position">
+        </td>
+        <td><span id="errorRetryPassword"></span></td>
+      </tr>
+      <tr>
+        <th>Ngày bắt đầu làm:</th>
+        <td><input type="date" name="startDate" id="startDate" /></td>
+        <td><span id="errorStartDate"></span></td>
+      </tr>
+      <tr>
+        <th>Lương cơ bản:</th>
+        <td><input type="text" name="salary" id="salary" /></td>
+        <td><span id="errorSalary"></span></td>
+      </tr>
+      <tr>
+        <th>Chức vụ:</th>
+        <td>
+          <select name="position" id="position">
               <option value="">--- Chọn ---</option>
               <option value="0">Giám đốc</option>
               <option value="1">Trưởng phòng</option>
               <option value="2">Nhân viên</option>
             </select>
-          </td>
-          <td><span id="errorPosition"></span></td>
-        </tr>
-        <tr>
-          <th>Sở thích:</th>
-          <td>
-            <input type="checkbox" name="hobbies" value="Coder" />Coder &nbsp;
-            <input type="checkbox" name="hobbies" value="Đọc sách" />Đọc sách
+        </td>
+        <td><span id="errorPosition"></span></td>
+      </tr>
+      <tr>
+        <th>Sở thích:</th>
+        <td>
+          <input type="checkbox" name="hobbies" value="Coder" />Coder &nbsp;
+          <input type="checkbox" name="hobbies" value="Đọc sách" />Đọc sách
             &nbsp; <input type="checkbox" name="hobbies" value="Thể thao" />Thể
             thao
-          </td>
-          <td><span id="errorHobbies"></span></td>
-        </tr>
-        <tr>
-          <th>Giờ làm:</th>
-          <td><input type="text" name="workTime" id="workTime" /></td>
-          <td><span id="errorWorkTime"></span></td>
-        </tr>
-        <tr>
-          <th></th>
-          <td><button type="submit" id="btnSubmit">Xác nhận</button></td>
-        </tr>
-      </table>
-    </form>
+        </td>
+        <td><span id="errorHobbies"></span></td>
+      </tr>
+      <tr>
+        <th>Giờ làm:</th>
+        <td><input type="text" name="workTime" id="workTime" /></td>
+        <td><span id="errorWorkTime"></span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td><button type="submit" id="btnSubmit">Xác nhận</button></td>
+      </tr>
+    </table>
+  </form>
 
-    <script src="assets/js/Common.js"></script>
-    <script src="assets/js/Validation.js"></script>
-    <script src="assets/js/Main.js"></script>
-  </body>
+  <script src="assets/js/Common.js"></script>
+  <script src="assets/js/Validation.js"></script>
+  <script src="assets/js/Main.js"></script>
+</body>
+
 </html>
